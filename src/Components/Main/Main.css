@@ -1,0 +1,73 @@
+.rating__content {
+  max-height: 416px;
+  max-width: 412px;
+  padding: 32px;
+  border-radius: 30px;
+  background: linear-gradient(#232a34, #181e27);
+}
+
+.rating__star {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(#232a34, #181e27);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 16px;
+  height: 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #969fad;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.rating__numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating__numbers-each {
+  width: 51px;
+  height: 51px;
+  background: linear-gradient(#232a34, #181e27);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.rating__numbers-each:hover {
+  color: #ffffff;
+  background: #7c8798;
+}
+
+.rating__button {
+  border: none;
+  width: 100%;
+  background-color: #fc7614;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Overpass";
+  padding-top: 11px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  border-radius: 22px;
+  margin-top: 32px;
+}
