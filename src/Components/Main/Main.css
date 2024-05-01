@@ -75,6 +75,11 @@ p {
   cursor: pointer;
   border: none;
   font-family: "Overpass";
+  transition: all 0.1s linear;
+}
+
+.rating__numbers-orange:hover {
+  transform: scale(1.1);
 }
 
 .rating__button {

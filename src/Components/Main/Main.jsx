@@ -6,6 +6,10 @@ const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];
   const [active, setActive] = useState(false);
 
+  const handleClick = (number) => {
+    setActive(number);
+  };
+
   return (
     <div className="rating__content">
       <div className="rating__star">
@@ -21,10 +25,12 @@ const Main = () => {
           return (
             <div
               className={`${
-                active ? "rating__numbers-orange" : "rating__numbers-each"
+                number === active
+                  ? "rating__numbers-orange"
+                  : "rating__numbers-each"
               }`}
               key={index}
-              onClick={() => setActive((number) => !number)}
+              onClick={() => handleClick(number)}
             >
               {number}
             </div>
