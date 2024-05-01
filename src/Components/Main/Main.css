@@ -50,11 +50,31 @@ p {
   align-items: center;
   margin-bottom: 0;
   cursor: pointer;
+  border: none;
+  color: #969fad;
+  font-family: "Overpass";
+  transition: all 0.1s linear;
 }
 
 .rating__numbers-each:hover {
   color: #ffffff;
   background: #7c8798;
+  transform: scale(1.1);
+}
+
+.rating__numbers-orange {
+  width: 51px;
+  height: 51px;
+  background-color: #fc7614;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  border: none;
+  font-family: "Overpass";
 }
 
 .rating__button {
@@ -70,4 +90,10 @@ p {
   letter-spacing: 2px;
   border-radius: 22px;
   margin-top: 32px;
+  cursor: pointer;
+}
+
+.rating__button:hover {
+  background-color: white;
+  color: #fc7614;
 }

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Main.css";
 
 const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];
+  const [active, setActive] = useState(false);
 
   return (
     <div className="rating__content">
@@ -16,9 +17,19 @@ const Main = () => {
         appreciated to help us improve our offering!
       </p>
       <div className="rating__numbers">
-        {numbers.map((number) => (
-          <p className="rating__numbers-each">{number}</p>
-        ))}
+        {numbers.map((number, index) => {
+          return (
+            <div
+              className={`${
+                active ? "rating__numbers-orange" : "rating__numbers-each"
+              }`}
+              key={index}
+              onClick={() => setActive((number) => !number)}
+            >
+              {number}
+            </div>
+          );
+        })}
       </div>
       <button type="submit" className="rating__button">
         Submit
