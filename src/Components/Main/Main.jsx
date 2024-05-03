@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./Main.css";
+import ThankYou from "../ThankYou/ThankYou";
 
 const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];

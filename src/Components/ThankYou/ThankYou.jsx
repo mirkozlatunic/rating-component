@@ -1,14 +1,6 @@
-import React, { useState } from "react";
-
 import "./ThankYou.css";
 
-const ThankYou = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
+const ThankYou = ({ isOpen, setModals }) => {
   return (
     <div className="thanks__content">
       <img

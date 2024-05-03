@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Main from "../Main/Main";
 import ThankYou from "../ThankYou/ThankYou";
 
@@ -6,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      {/* <Main /> */}
+      <Main />
       <ThankYou />
     </div>
   );
