@@ -6,11 +6,11 @@ import ThankYou from "../ThankYou/ThankYou";
 const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];
   const [active, setActive] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleClick = (number) => {
     setActive(number);
   };
-
   return (
     <div className="rating__content">
       <div className="rating__star">
@@ -38,9 +38,14 @@ const Main = () => {
           );
         })}
       </div>
-      <button type="submit" className="rating__button">
+      <button
+        type="submit"
+        className="rating__button"
+        onClick={() => setShowModal(!showModal)}
+      >
         Submit
       </button>
+      {showModal && <ThankYou setShowModal={setShowModal} />}
     </div>
   );
 };
