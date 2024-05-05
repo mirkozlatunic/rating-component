@@ -7,12 +7,20 @@ const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];
   const [active, setActive] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [selectedNumber, setSelectedNumber] = useState("");
 
   const handleClick = (number) => {
     setActive(number);
+    setSelectedNumber(number);
   };
+
+  const handleModal = (e) => {
+    setShowModal(!showModal);
+    e.preventDefault();
+  };
+
   return (
-    <div className="rating__content">
+    <form className="rating__content">
       <div className="rating__star">
         <img src="../../icon-star.svg" alt="start" />
       </div>
@@ -38,15 +46,13 @@ const Main = () => {
           );
         })}
       </div>
-      <button
-        type="submit"
-        className="rating__button"
-        onClick={() => setShowModal(!showModal)}
-      >
+      <button type="submit" className="rating__button" onClick={handleModal}>
         Submit
       </button>
-      {showModal && <ThankYou setShowModal={setShowModal} />}
-    </div>
+      {showModal && (
+        <ThankYou setShowModal={setShowModal} value={selectedNumber} />
+      )}
+    </form>
   );
 };
 
