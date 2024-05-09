@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import ThankYou from "../ThankYou/ThankYou";
 
 import "./Main.css";
-import ThankYou from "../ThankYou/ThankYou";
 
 const Main = () => {
   const numbers = ["1", "2", "3", "4", "5"];
@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <form className="rating__content">
       <div className="rating__star">
-        <img src="../../icon-star.svg" alt="start" />
+        <img src="../../assets/icon-star.svg" alt="start" />
       </div>
       <h1>How did we do?</h1>
       <p>

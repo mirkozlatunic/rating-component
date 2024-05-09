@@ -5,7 +5,7 @@ const ThankYou = ({ value }) => {
     <div className="thanks__container">
       <div className="thanks__content">
         <img
-          src="../../illustration-thank-you.svg"
+          src="../../assets/illustration-thank-you.svg"
           alt="thank you"
           className="thanks__image"
         />
